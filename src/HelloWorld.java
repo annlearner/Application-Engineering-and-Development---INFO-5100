@@ -1,3 +1,13 @@
+//Write an object oriented scenario for booking uber
+//Write an object oriented scenario for ordering food in a restaurant
+
+//Taxi
+
+//Car
+
+//Passenger
+
+
 import java.net.InetAddress;
 
 public class HelloWorld {
