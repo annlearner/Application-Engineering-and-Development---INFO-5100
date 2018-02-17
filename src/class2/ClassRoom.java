@@ -2,6 +2,10 @@ package class2;
 
 public class ClassRoom {
 	public static void main(String args[]) {
+
+		Student zane = new Student();
+		zane.gpa = 3.97f;
+		System.out.println(zane.getGrade());
 		Student lu = new Student();
 		Student pravallika = new Student();
 		lu.name = "Lu";

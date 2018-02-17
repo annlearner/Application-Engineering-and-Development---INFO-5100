@@ -9,13 +9,17 @@ public class Student {
 	}
 
 	String getGrade() {
-		if (gpa > 3.75) {
-			return "A";
+		if (gpa >= 3.85) {
+			return "A+";
 		}
 		if (gpa > 3.5) {
 			String r = "A-";
 			return r;
 		}
+		if (gpa > 3.75) {
+			return "A";
+		}
+
 		if (gpa > 3.25) {
 			return "B";
 		}
