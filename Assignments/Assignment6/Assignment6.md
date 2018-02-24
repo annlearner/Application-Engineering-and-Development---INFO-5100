@@ -5,8 +5,7 @@
 * Deadline is 24 : 00, 01 March.
 * Extra credits are added only if score is less than 10.
 * Try to attempt every question and keep practising from other online sites. 
-* Upload all assignments to a single repository named ‘Assignments’.
-* Contact us if any assistance is needed.  
+
 
 ## Question
 
