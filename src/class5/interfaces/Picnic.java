@@ -5,7 +5,7 @@ public class Picnic {
 	public static void main(String[] args) {
 		PictureDevice pd = getPictureDevice();
 		pd.takeShot();
-		
+
 		Timer timer = makeTimer();
 		timer.wakeup();
 
