@@ -3,20 +3,23 @@ package com.company;
 public abstract class Player {
 
     Hand hand;
+    int bankroll;
+    int minimum;
 
-    public int bet(int bankroll, int minimum){return 0;};
-    // REQUIRES: bankroll >= minimum
-    // EFFECTS: returns the player's bet, between minimum and bankroll
-    // inclusive
+    Player(int bankroll, int minimum){
+        this.bankroll = bankroll;
+        this.minimum = minimum;
+        this.hand = new Hand();
+    }
 
-    public abstract boolean draw(Card dealer,             // Dealer's "up card"
-                      Hand hand); // Player's current hand
+    public abstract int bet();
+
+
+    public abstract boolean draw(Card dealer); // Dealer's "up card"
     // EFFECTS: returns true if the player wishes to be dealt another
-    // card, false otherwise. For dealer The dealer must
-    // hit until he either reaches a total greater than or equal to 17
-    // (hard or soft), or busts. For player
+    // card, false otherwise.
 
-    public void expose(Card c){};
+    public abstract void expose(Card c);
     // EFFECTS: allows the player to "see" the newly-exposed card c.
     // For example, each card that is dealt "face up" is expose()d.
     // Likewise, if the dealer must show his "hole card", it is also
@@ -24,8 +27,12 @@ public abstract class Player {
     // player goes over 21 or is dealt a natural 21, the dealer need
     // not expose his hole card.
 
-    public void shuffled(){};
+    public abstract void shuffled();
     // EFFECTS: tells the player that the deck has been re-shuffled.
+
+    public void win(int wager){
+        bankroll += wager;
+    }
 
 };
 
@@ -47,6 +54,7 @@ public abstract class Player {
 // Whenever the count is +2 or greater and he has enough bankroll (larger than or equal
 // to the double of the minimum), the Counting player bets double the minimum, otherwise
 // he bets the minimum. The Counting player should not re-implement methods of the Simple player unnecessarily.
+
 
 
 
