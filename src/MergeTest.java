@@ -14,13 +14,13 @@ public class MergeTest {
 			int mn = iterateOnIterator(i, numberCount);
 			maxNumber = Math.max(maxNumber, mn);
 		}
-		return makeList(numberCount, maxNumber);
+		return makeList(numberCount, maxNumber, numToAgree);
 	}
 
-	private List<Integer> makeList(int[] numberCount, int maxNumber) {
+	private List<Integer> makeList(int[] numberCount, int maxNumber, int numToAgree) {
 		List<Integer> results = new ArrayList<Integer>();
 		for (int i = 0; i < maxNumber; i++) {
-			if (numberCount[i] >= 2) {
+			if (numberCount[i] >= numToAgree	) {
 				results.add(numberCount[i]);
 			}
 		}
